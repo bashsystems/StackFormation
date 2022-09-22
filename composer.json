@@ -1,5 +1,5 @@
 {
-    "name": "aoepeople/stackformation",
+    "name": "bashsystems/stackformation",
     "description": "Lightweight AWS CloudFormation Stack Manager",
     "license": "OSL-3.0",
     "authors": [{
@@ -17,6 +17,11 @@
         "email": "dn@smart-devs.rocks",
         "homepage": "https://github.com/smart-devs",
         "role": "Contributor"
+    }, {
+        "name": "Steve Robbins",
+        "email": "steve@steverobbins.com",
+        "homepage": "https://steverobbins.com",
+        "role": "Contributor"
     }],
     "require": {
         "symfony/console": "^3.0.0",
@@ -27,7 +32,7 @@
         "tedivm/jshrink": "^1.1",
         "vlucas/phpdotenv": "~2.1",
         "monolog/monolog": "~1",
-        "php": ">=5.5.0"
+        "php": ">=8.1.0"
     },
     "suggest": {
         "aoepeople/vault": "Allows encrypting/decrypting ssh keys and profiles on the fly"
