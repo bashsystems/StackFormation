@@ -83,6 +83,8 @@ class TemplateMerger
         $mergedTemplate = array_merge_recursive($mergedTemplate, $additionalData);
 
         $json = json_encode($mergedTemplate, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        $json = str_replace('"Allow": []', '"Allow": {}', $json);
+        $json = str_replace('"UriPath": []', '"UriPath": {}', $json);
 
         // Check for max template size
         if (strlen($json) > self::MAX_CF_TEMPLATE_SIZE) {

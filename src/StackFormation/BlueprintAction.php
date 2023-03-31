@@ -44,7 +44,7 @@ class BlueprintAction {
     }
 
 
-    protected function executeScript($script, $envVars=[], $type)
+    protected function executeScript($script, $envVars=[], $type=null)
     {
         if (empty($script)) {
             return;

@@ -37,11 +37,6 @@ class Manager {
                 ]
             ];
 
-            /** @todo upgrade or remove these lines as soon as AWS consistently uses TLS 1.2 */
-            if (defined('CURLOPT_SSLVERSION') && defined('CURL_SSLVERSION_TLSv1_0')) {
-                $parameters['http']['curl'][CURLOPT_SSLVERSION] = CURL_SSLVERSION_TLSv1_0;
-            }
-
             $parameters['http_handler'] = $this->getHttpHandler();
 
             $this->sdk = new \Aws\Sdk($parameters);
